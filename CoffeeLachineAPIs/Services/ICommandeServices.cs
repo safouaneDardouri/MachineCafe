@@ -11,12 +11,12 @@ namespace CoffeeLachineAPIs.Services
 {
     public interface ICommandeServices
     {
-        [OperationContract]
-        [WebInvoke(Method = "PUT",
-       RequestFormat = WebMessageFormat.Json,
-       ResponseFormat = WebMessageFormat.Json,
-       UriTemplate = "/Commande/add")]
-        bool Add(Commande cmd);
+        //  [OperationContract]
+        //  [WebInvoke(Method = "PUT",
+        // RequestFormat = WebMessageFormat.Json,
+        // ResponseFormat = WebMessageFormat.Json,
+        // UriTemplate = "/Commande/add")]
+        //  bool Add(Commande cmd);
 
 
         [OperationContract]
@@ -54,5 +54,12 @@ namespace CoffeeLachineAPIs.Services
         UriTemplate = "/Commande/AfficherCommandes")]
         List<Commande> AfficherCommandes();
 
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT",
+       RequestFormat = WebMessageFormat.Json,
+       ResponseFormat = WebMessageFormat.Json,
+       UriTemplate = "/Commande/EffacerCommande")]
+        void EffacerCommande(Commande cmd);
     }
 }

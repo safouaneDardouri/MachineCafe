@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace CoffeeLachineAPIs.Services
 {
-    class CommandeServices : ICommandeServices
-    { private CommandeDAO cmd = new CommandeDAO();
+    public class CommandeServices : ICommandeServices
+    {
+        private CommandeDAO cmd = new CommandeDAO();
         public List<Commande> AfficherCommandes()
         {
             var result = cmd.GetListCommande();
@@ -17,7 +18,13 @@ namespace CoffeeLachineAPIs.Services
 
         public void AjouterCommande(Commande insertObj)
         {
-             cmd.Add(insertObj);
+            cmd.Add(insertObj);
+        }
+
+        public void EffacerCommande(Commande commande)
+        {
+            cmd.DeleteCommand(commande);
+
         }
 
         public void MajCommande(Commande updateObj)
@@ -37,5 +44,7 @@ namespace CoffeeLachineAPIs.Services
             var result = cmd.getByUser(id);
             return result;
         }
+
+
     }
 }

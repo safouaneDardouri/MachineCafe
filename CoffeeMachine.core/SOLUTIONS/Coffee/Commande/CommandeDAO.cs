@@ -16,7 +16,7 @@ namespace CoffeeMachine.core.SOLUTIONS.Coffee.Commande
             var data = DotNetTNConnector.GetList<Commande>();
             return data;
         }
-
+        /**Tested**/
         public void Add(Commande insertObj)
         {
 
@@ -30,7 +30,7 @@ namespace CoffeeMachine.core.SOLUTIONS.Coffee.Commande
 
             }
         }
-
+        /**Tested**/
         public void Update(Commande updateObj)
         {
             DotNetTNConnector.Update(updateObj);
@@ -44,10 +44,18 @@ namespace CoffeeMachine.core.SOLUTIONS.Coffee.Commande
 
         public List<Commande> getByUser(string id)
         {
-            
-                var data2 = DotNetTNConnector.GetList<Commande>(it => it.userId == id);
-                return data2;
-            
+
+            var data2 = DotNetTNConnector.GetList<Commande>(it => it.userId == id);
+            return data2;
+
+        }
+        /**Tested**/
+        public void DeleteCommand(Commande cmd)
+        {
+
+            var data2 = DotNetTNConnector.Delete(cmd);
+            //return data2;
+
         }
 
     }
