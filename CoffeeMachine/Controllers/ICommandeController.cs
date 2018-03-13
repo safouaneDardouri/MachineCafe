@@ -12,11 +12,11 @@ namespace CoffeeMachine.Controllers
 {
     interface ICommandeController
     {
-        [OperationContract]
-        [WebInvoke(Method = "PUT",
-        RequestFormat = WebMessageFormat.Json,
-        ResponseFormat = WebMessageFormat.Json,
-        UriTemplate = "/Commande/add")]
-        bool Add(Commande cmd);
+       // [OperationContract]
+       // [WebInvoke(Method = "PUT",
+       // RequestFormat = WebMessageFormat.Json,
+       // ResponseFormat = WebMessageFormat.Json,
+       // UriTemplate = "/Commande/add")]
+       // bool Add(Commande cmd);
     }
 }
